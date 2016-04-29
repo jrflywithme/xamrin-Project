@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JituTestApp_S_.view.menupage"
+             Title="App">
+  <ContentPage.Content>
+    <ListView
+           CachingStrategy="RecycleElement"
+           SeparatorColor="Transparent"
+           HasUnevenRows="True"
+           x:Name="menuList">
+      <ListView.Header>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
+          </Grid.RowDefinitions>
+
+          <BoxView Grid.ColumnSpan="3"
+                   Grid.RowSpan="4"
+                   BackgroundColor="#03A9F4"/>
+
+          <Label
+              Grid.Column="1"
+              Grid.Row="2"
+              Text="Jitu Test App"
+                            />
+        </Grid>
+      </ListView.Header>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid Padding="20">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Label Grid.Column="1" Text="{Binding Title}" FontSize="12"/>
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </ContentPage.Content>
+</ContentPage>
